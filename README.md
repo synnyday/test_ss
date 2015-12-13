@@ -1,7 +1,8 @@
 # test_ss
 SiteSecure test assignment
 
-# Task
+Task
+-----------
 Есть ресурс virustotal, у него есть APIv2. 
 Нужно написать пример, который на вход принимает список сайтов, проходит список, 
 по каждому сайту отправляет запрос в virustotal, парсит ответ и выводит в итоге список сайтов, у которых вердикт фишинг
@@ -30,10 +31,13 @@ Usage
 ./manage.py check_urls --help
 ```
 
-# Result
+Result
+-----------
 Данные выводятся в командную строку в виде списка
+```
 Start to retrieving URLs scan reports
 Phishing sites:
 http://cheshtainfotech.com/site.html
+```
 Лог приложения, указан в настройках проекта:
-/tmp/test_ss_debug.log
+`/tmp/test_ss_debug.log`
