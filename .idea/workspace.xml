@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c5aeb8dc-797b-4553-b563-6d976b2ff7fc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_ss/management/commands/check_urls.py" afterPath="$PROJECT_DIR$/test_ss/management/commands/check_urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_assignment/settings.py" afterPath="$PROJECT_DIR$/test_assignment/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_ss/test_file_with_urls" afterPath="$PROJECT_DIR$/test_ss/test_file_with_urls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_assignment/urls.py" afterPath="$PROJECT_DIR$/test_assignment/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_ss/virustotal_client.py" afterPath="$PROJECT_DIR$/test_ss/virustotal_client.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_assignment/wsgi.py" afterPath="$PROJECT_DIR$/test_assignment/wsgi.py" />
     </list>
     <ignored path="test_ss.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,8 +47,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5814266">
-              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.6298789">
+              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -75,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/test_assignment/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+              <caret line="98" column="25" selection-start-line="98" selection-start-column="25" selection-end-line="98" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -529,12 +522,12 @@
       <created>1450036670089</created>
       <option name="number" value="Default" />
       <updated>1450036670089</updated>
-      <workItem from="1450036671591" duration="1711000" />
+      <workItem from="1450036671591" duration="1857000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1711000" />
+    <option name="totallyTimeSpent" value="1857000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-4" width="1602" height="905" extended-state="6" />
@@ -574,14 +567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="68" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_assignment/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -626,10 +611,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_assignment/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="98" column="25" selection-start-line="98" selection-start-column="25" selection-end-line="98" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5814266">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.6298789">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
           <folding />
         </state>
       </provider>

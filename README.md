@@ -23,3 +23,5 @@ python >= 2.7.3
 Start to retrieving URLs scan reports
 Phishing sites:
 http://cheshtainfotech.com/site.html
+Лог приложения, указан в настройках проекта:
+/tmp/test_ss_debug.log
