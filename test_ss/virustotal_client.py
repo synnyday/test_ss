@@ -34,6 +34,9 @@ class VirusTotalClient(object):
             self.transfer.url = self.URL + '/report'
             self.transfer.request_data = dict(resource=url, apikey=self.API_KEY)
         self.transfer.send()
-        logger.debug('VirusTotal response: %s', self.transfer.response_data)
+        if self.transfer.response_data:
+            logger.debug('VirusTotal response: %s', self.transfer.response_data)
+        else:
+            raise Exception('VirusTotal response is empty')
         result = simplejson.loads(self.transfer.response_data)
         return result

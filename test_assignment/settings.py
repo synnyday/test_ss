@@ -1,5 +1,5 @@
 """
-Django settings for test_assignments project.
+Django settings for test_assignment project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -49,9 +49,9 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'test_assignments.urls'
+ROOT_URLCONF = 'test_assignment.urls'
 
-WSGI_APPLICATION = 'test_assignments.wsgi.application'
+WSGI_APPLICATION = 'test_assignment.wsgi.application'
 
 
 # Database

@@ -62,6 +62,8 @@ class Command(BaseCommand):
         batch = '\n' . join(self.urls)
         try:
             result = self.client.send(batch)
+            if not result:
+                raise Exception("Response is empty")
         except:
             logger.exception("Error to submit batch for scanning: %s", batch)
             sys.exit("Error to submit URLs for scanning")
@@ -90,31 +92,31 @@ class Command(BaseCommand):
         print "Start to retrieving URLs scan reports"
         reports = list()
         # TODO Need to send query the report at regular intervals until the result shows up
-        while(retrieving_urls.__len__() > 0):
-            for retrieving_url in retrieving_urls:
-                if 'response_code' not in retrieving_url or retrieving_url['response_code'] == 0:
-                    logger.error('The response code does not exist or item was not present in VirusTotal dataset')
-                    retrieving_urls.remove(retrieving_url)
-                    continue
-                if retrieving_url['response_code'] == -2:
-                    logger.error('Url is still queued for analysiss')
-                    continue
-                if 'resource' not in retrieving_url:
-                    logger.error('The resource does not exist')
-                    retrieving_urls.remove(retrieving_url)
-                    continue
-                if retrieving_url['resource'] not in self.urls:
-                    logger.error('URL not found in the check list: %s', retrieving_url['resource'])
-                    retrieving_urls.remove(retrieving_url)
-                    continue
-                logger.debug("Retrieving current url: %s",  retrieving_url['resource'])
-                try:
-                    report = self.client.send(retrieving_url['resource'], 2)
-                    if 'response_code' in retrieving_url and retrieving_url['response_code'] == 1:
-                        reports.append(report)
-                        retrieving_urls.remove(retrieving_url)
-                except:
-                    logger.exception("Error to submit resource for retrieving: %s", retrieving_url['resource'])
+        # while(retrieving_urls.__len__() > 0):
+        for retrieving_url in retrieving_urls:
+            if 'response_code' not in retrieving_url or retrieving_url['response_code'] == 0:
+                logger.error('The response code does not exist or item was not present in VirusTotal dataset')
+                # retrieving_urls.remove(retrieving_url)
+                continue
+            if retrieving_url['response_code'] == -2:
+                logger.error('Url is still queued for analysiss')
+                continue
+            if 'resource' not in retrieving_url:
+                logger.error('The resource does not exist')
+                # retrieving_urls.remove(retrieving_url)
+                continue
+            if retrieving_url['resource'] not in self.urls:
+                logger.error('URL not found in the check list: %s', retrieving_url['resource'])
+                # retrieving_urls.remove(retrieving_url)
+                continue
+            logger.debug("Retrieving current url: %s",  retrieving_url['resource'])
+            try:
+                report = self.client.send(retrieving_url['resource'], 2)
+                if 'response_code' in retrieving_url and retrieving_url['response_code'] == 1:
+                    reports.append(report)
+                    # retrieving_urls.remove(retrieving_url)
+            except:
+                logger.exception("Error to submit resource for retrieving: %s", retrieving_url['resource'])
         return reports
 
     def get_phishing_urls(self, reports):
