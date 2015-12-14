@@ -79,6 +79,7 @@ class Command(BaseCommand):
         if self.urls.__len__() < 1:
             sys.exit('List URLs is empty')
         else:
+            print "Check current urls: {}" . format(self.urls)
             logger.debug("Check current urls: %s",  self.urls)
 
     def _retrieving_url_scan_reports(self, retrieving_urls):
@@ -103,10 +104,6 @@ class Command(BaseCommand):
                 continue
             if 'resource' not in retrieving_url:
                 logger.error('The resource does not exist')
-                # retrieving_urls.remove(retrieving_url)
-                continue
-            if retrieving_url['resource'] not in self.urls:
-                logger.error('URL not found in the check list: %s', retrieving_url['resource'])
                 # retrieving_urls.remove(retrieving_url)
                 continue
             logger.debug("Retrieving current url: %s",  retrieving_url['resource'])
@@ -134,6 +131,6 @@ class Command(BaseCommand):
                     logger.error('%s result scanning not found', name)
                     continue
                 if scan['result'] == 'phishing site':
-                    phishing_urls = report['url']
+                    phishing_urls.append(report['url'])
                     break
         return phishing_urls
